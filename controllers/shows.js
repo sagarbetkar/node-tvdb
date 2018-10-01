@@ -5,8 +5,8 @@ var xml2js = require('xml2js');
 const Show = require('../models/shows');
 
 exports.getShowsFromTvdbs = function(req, res) {
-    console.log(req.query.search)
-    request.get('http://thetvdb.com/api/GetSeries.php?seriesname=' + req.query.search,
+    console.log(req.query.seriesName)
+    request.get('http://thetvdb.com/api/GetSeries.php?seriesname=' + req.query.seriesName,
         function(err, response, body) {
           if (err) throw err;
           const parser = require('xml2js').Parser({
