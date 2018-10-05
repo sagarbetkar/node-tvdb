@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-  "ng": "ng",
-  "start": "node ./bin/www",
-  "build": "ng build",
-  "test": "ng test",
-  "lint": "ng lint",
-  "e2e": "ng e2e"
-},
+    "ng": "ng",
+    "start": "node ./bin/www",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
   "dependencies": {
     "async": "^2.6.1",
     "bcryptjs": "^2.4.3",
@@ -23,6 +23,7 @@
     "mongoose": "^5.2.17",
     "morgan": "~1.9.0",
     "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
     "xml2js": "^0.4.19"
   }
 }
