@@ -21,8 +21,14 @@ exports.userSignUp = (req, res, next) => {
     password: req.body.password
   });
   user.save(function(err) {
-    if (err) return next(err);
-    res.send(200);
+    if (err) return next({
+      message: "User registeration failed",
+      error: err
+    });
+    res.json({
+      message: "User registered successfully",
+      status: 200
+    });
   });
 };
 
@@ -30,11 +36,16 @@ exports.userNormalLogin = (req, res, next) => {
   User.findOne({
     email: req.body.email
   }, function(err, user) {
-    if (!user) return res.send(401, 'User does not exist');
+    if (!user) return res.json({
+      status: 401,
+      message: 'User does not exist'
+    });
     user.comparePassword(req.body.password, function(err, isMatch) {
-      if (!isMatch) return res.send(401, 'Invalid email and/or password');
+      if (!isMatch) return res.json({status:401, message:'Invalid email and/or password'});
       var token = createJwtToken(user);
-      res.send({
+      res.json({
+        message: "User successfully logged in.",
+        status: 200,
         token: token
       });
     });
