@@ -11,20 +11,20 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "^2.6.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
-    "cookie-parser": "~1.4.3",
+    "cookie-parser": "^1.4.5",
     "crypto": "^1.0.1",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "jwt-simple": "^0.5.3",
-    "moment": "^2.22.2",
-    "mongoose": "^5.2.17",
+    "moment": "^2.25.1",
+    "mongoose": "^5.9.11",
     "morgan": "~1.9.0",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.5",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.8",
     "toastr": "^2.1.4",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.23"
   }
 }
